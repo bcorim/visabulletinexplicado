@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visa Bulletin Abril 2026 — O Que Muda na Sua Vida | D4U Immigration</title>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --silk:       #EEE5D9;
+    --marble:     #E8E4E0;
+    --pearl:      #FDFEFF;
+    --velvet:     #222D52;
+    --velvet-mid: #2E3D6B;
+    --velvet-lt:  #3D4F84;
+    --onyx:       #1C1C2E;
+    --text:       #2A2A3A;
+    --muted:      #7A7E8F;
+    --border:     #D5CFC8;
+    --s-alto:     #1B4D3E;
+    --s-alto-bg:  #1B4D3E14;
+    --s-bom:      #1B3D6A;
+    --s-bom-bg:   #1B3D6A14;
+    --s-med:      #7B5E3A;
+    --s-med-bg:   #7B5E3A14;
+    --s-baixo:    #A03A20;
+    --s-baixo-bg: #A03A2014;
+    --s-nao:      #8B1A1A;
+    --s-nao-bg:   #8B1A1A14;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--silk);
+    color: var(--text);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  p { font-size: 14px; line-height: 1.8; font-weight: 300; }
+  p + p { margin-top: 12px; }
+  strong { font-weight: 600; color: var(--onyx); }
+  sup.fn { font-size: 10px; color: var(--velvet); font-family: 'Josefin Sans', sans-serif; }
+  .lead { font-size: 15px; line-height: 1.8; color: #3A3A4A; font-weight: 300; }
+  .divider { height: 1px; background: var(--border); margin: 32px 0; }
+
+  /* TOPBAR */
+  .topbar {
+    background: var(--velvet);
+    padding: 11px 32px;
+    display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+  }
+  .topbar-brand { font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:11px; letter-spacing:0.3em; text-transform:uppercase; color:var(--marble); }
+  .topbar-badge { font-family:'Josefin Sans',sans-serif; font-weight:200; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:#9baac8; }
+
+  /* HERO */
+  .hero { background: var(--velvet); padding: 60px 32px 52px; position: relative; overflow: hidden; }
+  .hero::after { content:'EB'; position:absolute; right:-20px; top:-20px; font-family:'Cormorant Garamond',serif; font-size:260px; font-weight:300; color:rgba(255,255,255,0.03); line-height:1; pointer-events:none; user-select:none; }
+  .hero-inner { max-width: 700px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-kicker { font-family:'Josefin Sans',sans-serif; font-weight:200; font-size:10px; letter-spacing:0.35em; text-transform:uppercase; color:#9baac8; margin-bottom:20px; display:flex; align-items:center; gap:12px; }
+  .hero-kicker::before { content:''; display:inline-block; width:32px; height:1px; background:#9baac8; }
+  .hero h1 { font-family:'Josefin Sans',sans-serif; font-weight:100; font-size:clamp(32px,6vw,56px); line-height:1.1; letter-spacing:0.04em; text-transform:uppercase; color:#fff; margin-bottom:8px; }
+  .hero h1 em { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:300; text-transform:none; letter-spacing:0.01em; color:var(--marble); font-size:1.1em; }
+  .hero-sub { margin-top:22px; font-family:'Raleway',sans-serif; font-weight:300; font-size:14px; line-height:1.8; color:#9baac8; max-width:540px; }
+  .hero-sub strong { color:var(--marble); font-weight:500; }
+
+  /* LAYOUT */
+  .page { max-width: 760px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* SECTION */
+  .section { margin-top: 60px; }
+  .sec-label { font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:10px; letter-spacing:0.35em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; display:flex; align-items:center; gap:12px; }
+  .sec-label::after { content:''; flex:1; height:1px; background:var(--border); }
+  .sec-title { font-family:'Josefin Sans',sans-serif; font-weight:200; font-size:clamp(20px,4vw,28px); letter-spacing:0.06em; text-transform:uppercase; color:var(--velvet); line-height:1.2; margin-bottom:22px; }
+  .sec-title em { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:400; text-transform:none; letter-spacing:0.01em; color:var(--velvet-mid); font-size:1.1em; }
+
+  /* CARD */
+  .card { background:var(--pearl); border:1px solid var(--border); border-radius:2px; padding:26px 28px; }
+
+  /* STATUS PILLS */
+  .pill-row { display:flex; gap:12px; flex-wrap:wrap; margin:26px 0; }
+  .pill { display:flex; align-items:center; gap:10px; padding:14px 20px; border-radius:2px; border:1px solid; flex:1; min-width:200px; }
+  .pill-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+  .pill-label { font-family:'Josefin Sans',sans-serif; font-weight:400; font-size:10px; letter-spacing:0.18em; text-transform:uppercase; display:block; margin-bottom:2px; }
+  .pill-value { font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:600; letter-spacing:0.02em; display:block; }
+  .pill-note { font-size:12px; color:var(--muted); font-weight:300; }
+  .pill.eb1 { background:var(--s-bom-bg); border-color:#1B3D6A35; }
+  .pill.eb1 .pill-label { color:var(--s-bom); }
+  .pill.eb1 .pill-value { color:var(--velvet); }
+  .pill.eb2 { background:var(--s-alto-bg); border-color:#1B4D3E35; }
+  .pill.eb2 .pill-label { color:var(--s-alto); }
+  .pill.eb2 .pill-value { color:var(--s-alto); }
+
+  /* HIGHLIGHT */
+  .highlight { border-left:3px solid var(--velvet); background:var(--pearl); padding:18px 22px; margin:16px 0; border-radius:0 2px 2px 0; }
+  .highlight.green { border-left-color:var(--s-alto); }
+  .highlight.amber { border-left-color:var(--s-med); }
+  .highlight.red   { border-left-color:var(--s-nao); }
+  .highlight.navy  { border-left-color:var(--velvet); }
+  .highlight-title { font-family:'Josefin Sans',sans-serif; font-weight:400; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; margin-bottom:8px; }
+  .highlight.green .highlight-title { color:var(--s-alto); }
+  .highlight.amber .highlight-title { color:var(--s-med); }
+  .highlight.red   .highlight-title { color:var(--s-nao); }
+  .highlight.navy  .highlight-title { color:var(--velvet); }
+  .highlight p { font-size:14px; color:var(--text); font-weight:300; line-height:1.75; }
+
+  /* TIMELINE */
+  .timeline { display:flex; gap:0; overflow-x:auto; margin:22px 0; padding-bottom:4px; }
+  .tl-item { flex:1; min-width:110px; padding:14px 12px; background:var(--pearl); border:1px solid var(--border); border-right:none; position:relative; }
+  .tl-item:first-child { border-radius:2px 0 0 2px; }
+  .tl-item:last-child { border-right:1px solid var(--border); border-radius:0 2px 2px 0; }
+  .tl-item.active { background:var(--velvet); }
+  .tl-item::after { content:'›'; position:absolute; right:-10px; top:50%; transform:translateY(-50%); font-size:18px; color:var(--muted); z-index:2; }
+  .tl-item:last-child::after { display:none; }
+  .tl-num { font-family:'Josefin Sans',sans-serif; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; margin-bottom:5px; }
+  .tl-item .tl-num { color:var(--muted); }
+  .tl-item.active .tl-num { color:#9baac8; }
+  .tl-text { font-family:'Raleway',sans-serif; font-size:12px; font-weight:500; line-height:1.4; color:var(--text); }
+  .tl-item.active .tl-text { color:#fff; }
+  .tl-sub { font-size:10px; color:var(--muted); margin-top:3px; line-height:1.4; }
+  .tl-item.active .tl-sub { color:#9baac8; }
+
+  /* CHART */
+  .chart-container { background:var(--pearl); border:1px solid var(--border); border-radius:2px; padding:28px 24px 20px; margin:24px 0; }
+  .chart-title { font-family:'Josefin Sans',sans-serif; font-weight:400; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--velvet); margin-bottom:4px; }
+  .chart-sub { font-size:12px; color:var(--muted); margin-bottom:20px; font-weight:300; }
+  .chart-canvas-wrap { position:relative; height:220px; }
+  .chart-annotation { display:flex; gap:20px; flex-wrap:wrap; margin-top:16px; padding-top:14px; border-top:1px solid var(--marble); }
+  .chart-ann-item { display:flex; align-items:center; gap:7px; font-size:11px; color:var(--muted); }
+  .chart-ann-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+
+  /* SCENARIOS */
+  .scenario-list { display:flex; flex-direction:column; gap:14px; }
+  .scenario { background:var(--pearl); border:1px solid var(--border); border-radius:2px; overflow:hidden; }
+  .scenario-top { display:grid; grid-template-columns:60px 1fr auto; align-items:start; gap:16px; padding:20px 22px 16px; }
+  @media(max-width:520px){.scenario-top{grid-template-columns:48px 1fr;} .sec-num-right{display:none;}}
+  .scen-badge { width:46px; height:46px; border-radius:1px; display:flex; flex-direction:column; align-items:center; justify-content:center; flex-shrink:0; border:1px solid; }
+  .scen-badge-num { font-family:'Josefin Sans',sans-serif; font-weight:200; font-size:18px; line-height:1; letter-spacing:0.04em; }
+  .scen-badge-word { font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:7px; letter-spacing:0.15em; text-transform:uppercase; margin-top:2px; }
+  .scen-badge.s1{background:var(--s-alto-bg);border-color:#1B4D3E35;} .scen-badge.s1 .scen-badge-num,.scen-badge.s1 .scen-badge-word{color:var(--s-alto);}
+  .scen-badge.s2{background:var(--s-bom-bg);border-color:#1B3D6A35;} .scen-badge.s2 .scen-badge-num,.scen-badge.s2 .scen-badge-word{color:var(--s-bom);}
+  .scen-badge.s3{background:var(--s-med-bg);border-color:#7B5E3A35;} .scen-badge.s3 .scen-badge-num,.scen-badge.s3 .scen-badge-word{color:var(--s-med);}
+  .scen-badge.s4{background:var(--s-baixo-bg);border-color:#A03A2035;} .scen-badge.s4 .scen-badge-num,.scen-badge.s4 .scen-badge-word{color:var(--s-baixo);}
+  .scen-badge.s5{background:var(--s-nao-bg);border-color:#8B1A1A35;} .scen-badge.s5 .scen-badge-num,.scen-badge.s5 .scen-badge-word{color:var(--s-nao);}
+  .scen-meta {}
+  .scen-title { font-family:'Josefin Sans',sans-serif; font-weight:400; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:var(--onyx); margin-bottom:3px; line-height:1.3; }
+  .scen-visas { font-size:11px; color:var(--muted); font-family:'Josefin Sans',sans-serif; letter-spacing:0.1em; font-weight:300; }
+  .sec-num-right { text-align:right; flex-shrink:0; }
+  .seg-pct { font-family:'Cormorant Garamond',serif; font-size:30px; font-weight:600; line-height:1; letter-spacing:-0.02em; }
+  .seg-label { font-family:'Josefin Sans',sans-serif; font-weight:300; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; margin-top:3px; }
+  .s1 .seg-pct,.s1 .seg-label{color:var(--s-alto);}
+  .s2 .seg-pct,.s2 .seg-label{color:var(--s-bom);}
+  .s3 .seg-pct,.s3 .seg-label{color:var(--s-med);}
+  .s4 .seg-pct,.s4 .seg-label{color:var(--s-baixo);}
+  .s5 .seg-pct,.s5 .seg-label{color:var(--s-nao);}
+  .seg-bar-wrap{padding:0 22px 4px;}
+  .seg-bar-bg{height:3px;background:var(--border);border-radius:100px;overflow:hidden;}
+  .seg-bar-fill{height:100%;border-radius:100px;}
+  .s1 .seg-bar-fill{background:var(--s-alto);width:85%;}
+  .s2 .seg-bar-fill{background:var(--s-bom);width:75%;}
+  .s3 .seg-bar-fill{background:var(--s-med);width:55%;}
+  .s4 .seg-bar-fill{background:var(--s-baixo);width:35%;}
+  .s5 .seg-bar-fill{background:var(--s-nao);width:15%;}
+  .scenario-body{padding:16px 22px 20px;border-top:1px solid var(--marble);}
+  .scenario-body p{font-size:14px;line-height:1.8;color:#4A4A5A;font-weight:300;}
+  .scenario-body p+p{margin-top:12px;}
+  .scenario-body strong{font-weight:600;color:var(--onyx);}
+  .atencao-box{background:var(--marble);border-left:2px solid var(--velvet);padding:12px 16px;margin-top:14px;border-radius:0 2px 2px 0;}
+  .atencao-label{font-family:'Josefin Sans',sans-serif;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--velvet);margin-bottom:5px;}
+  .atencao-box p{font-size:12px;color:var(--text);}
+  .scen-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid var(--marble);}
+  .chip{font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;padding:4px 10px;border-radius:1px;border:1px solid;}
+  .chip.ok{color:var(--s-alto);background:var(--s-alto-bg);border-color:#1B4D3E28;}
+  .chip.warn{color:var(--s-med);background:var(--s-med-bg);border-color:#7B5E3A28;}
+  .chip.bad{color:var(--s-nao);background:var(--s-nao-bg);border-color:#8B1A1A28;}
+  .chip.info{color:var(--s-bom);background:var(--s-bom-bg);border-color:#1B3D6A28;}
+
+  /* TABELA */
+  .table-wrap{background:var(--pearl);border:1px solid var(--border);border-radius:2px;overflow-x:auto;margin-top:22px;}
+  table{width:100%;border-collapse:collapse;min-width:500px;}
+  thead{background:var(--velvet);}
+  th{font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:#9baac8;padding:12px 16px;text-align:left;white-space:nowrap;}
+  td{font-size:13px;padding:11px 16px;border-bottom:1px solid var(--marble);color:var(--text);font-weight:300;vertical-align:middle;}
+  tr:last-child td{border-bottom:none;}
+  tr:hover td{background:#F5F0EB;}
+  .seg-chip{display:inline-block;font-family:'Josefin Sans',sans-serif;font-weight:400;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 8px;border-radius:1px;border:1px solid;white-space:nowrap;}
+  .seg-chip.mt-alto{color:var(--s-alto);background:var(--s-alto-bg);border-color:#1B4D3E35;}
+  .seg-chip.alto{color:var(--s-bom);background:var(--s-bom-bg);border-color:#1B3D6A35;}
+  .seg-chip.moderado{color:var(--s-med);background:var(--s-med-bg);border-color:#7B5E3A35;}
+  .seg-chip.baixo{color:var(--s-baixo);background:var(--s-baixo-bg);border-color:#A03A2035;}
+  .seg-chip.nao{color:var(--s-nao);background:var(--s-nao-bg);border-color:#8B1A1A35;}
+  .seg-chip.pausa{color:var(--velvet);background:#222D520F;border-color:#222D5230;}
+
+  /* FOOTNOTES */
+  .footnotes{margin-top:60px;padding-top:22px;border-top:1px solid var(--border);}
+  .fn-title{font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
+  .fn-item{display:flex;gap:10px;margin-bottom:14px;font-size:12px;line-height:1.7;color:#5A5A6E;font-weight:300;}
+  .fn-item sup{font-family:'Josefin Sans',sans-serif;font-size:10px;color:var(--velvet);flex-shrink:0;margin-top:3px;letter-spacing:0.1em;}
+
+  /* FOOTER */
+  .footer-wrap{margin-top:44px;padding:30px 26px;background:var(--velvet);border-radius:2px;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+  .footer-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#fff;letter-spacing:0.04em;margin-bottom:4px;}
+  .footer-role{font-family:'Josefin Sans',sans-serif;font-weight:200;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:#9baac8;margin-bottom:2px;}
+  .footer-company{font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--marble);}
+  .footer-linkedin{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#9baac8;text-decoration:none;border-bottom:1px solid #3D4F7A;padding-bottom:1px;}
+  .footer-linkedin:hover{color:var(--marble);border-color:#9baac8;}
+  .footer-disclaimer{max-width:340px;font-size:11px;line-height:1.7;color:#6B7A9A;font-weight:300;}
+  .footer-disclaimer strong{color:#9baac8;font-weight:500;}
+  .footer-date{margin-top:22px;padding-top:18px;border-top:1px solid #2E3D6B;font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#3D4F7A;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <span class="topbar-brand">D4U Immigration</span>
+  <span class="topbar-badge">Análise Informativa · Abril 2026</span>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Visa Bulletin · Departamento de Estado dos EUA · Abril 2026</div>
+    <h1>O que <em>muda na sua vida</em><br>se você quer aplicar<br>para o Green Card</h1>
+    <p class="hero-sub">
+      Todo mês o governo americano publica um boletim que define <strong>quem pode avançar no processo de Green Card</strong>. O de Abril de 2026 traz uma das melhores janelas dos últimos anos para brasileiros. Leia este guia antes da sua próxima conversa com um especialista.
+    </p>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- SEÇÃO 1 -->
+  <div class="section">
+    <div class="sec-label">A notícia principal</div>
+    <div class="sec-title">EB-1 e EB-2 <em>Current</em> para brasileiros</div>
+
+    <p class="lead">No Visa Bulletin de Abril de 2026, as categorias EB-1 e EB-2 aparecem como <strong>"Current"</strong> para o Brasil. Isso significa uma coisa só: <strong>não há fila de espera no momento.</strong></p>
+
+    <div class="pill-row">
+      <div class="pill eb1">
+        <div class="pill-dot" style="background:var(--s-bom)"></div>
+        <div>
+          <span class="pill-label">EB-1 — Priority Workers</span>
+          <span class="pill-value">CURRENT</span>
+          <span class="pill-note">EB-1A (Habilidade Extraordinária) · EB-1B · EB-1C</span>
+        </div>
+      </div>
+      <div class="pill eb2">
+        <div class="pill-dot" style="background:var(--s-alto)"></div>
+        <div>
+          <span class="pill-label">EB-2 / NIW — National Interest Waiver</span>
+          <span class="pill-value">CURRENT</span>
+          <span class="pill-note">Advanced Degree ou Habilidade Excepcional — diversas áreas</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p><strong>Quem pode se qualificar para o EB-2 NIW?</strong> O EB-2 é mais amplo do que muita gente imagina. Inclui profissionais com pós-graduação (mestrado, doutorado, especialização relevante) ou que demonstrem habilidade excepcional na sua área. Na prática, já vimos aprovações para perfis muito variados:</p>
+      <p style="margin-top:10px"><strong>Tecnologia e Ciência:</strong> engenheiros, cientistas de dados, pesquisadores de IA, desenvolvedores sêniores, profissionais de biotecnologia. <strong>Saúde:</strong> médicos, fisioterapeutas, enfermeiros especialistas, pesquisadores clínicos. <strong>Negócios e Gestão:</strong> profissionais de finanças, administração, estratégia corporativa, marketing com impacto mensurável. <strong>Direito e Políticas Públicas:</strong> advogados com atuação internacional ou em áreas estratégicas. <strong>Educação e Pesquisa:</strong> acadêmicos, professores universitários, pesquisadores com publicações.</p>
+      <p style="margin-top:10px">O critério central do NIW é demonstrar que o seu trabalho tem <em>relevância nacional</em> para os EUA e que dispensar o processo tradicional de patrocínio de empregador é justificável pelo impacto da sua contribuição.</p>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 2: GRÁFICO HISTÓRICO -->
+  <div class="section">
+    <div class="sec-label">Contexto histórico</div>
+    <div class="sec-title">A última vez que vimos isso foi em <em>Dezembro de 2022</em></div>
+
+    <p class="lead">Para entender o tamanho desta oportunidade, é preciso ver o que aconteceu nos últimos anos. O gráfico abaixo mostra a data de corte do EB-2 para o Brasil mês a mês — quando a barra está no topo, significa que não havia fila. Quando a barra está baixa, havia uma data de corte: apenas quem tinha dado entrada antes daquela data podia avançar.</p>
+
+    <div class="chart-container">
+      <div class="chart-title">Data de Corte EB-2 — Brasil / Rest of World</div>
+      <div class="chart-sub">Final Action Dates · Jan 2022 a Abr 2026 · Fonte: U.S. Department of State</div>
+      <div class="chart-canvas-wrap">
+        <canvas id="eb2Chart"></canvas>
+      </div>
+      <div class="chart-annotation">
+        <div class="chart-ann-item"><div class="chart-ann-dot" style="background:var(--velvet)"></div> Current (sem fila) — máximo da escala</div>
+        <div class="chart-ann-item"><div class="chart-ann-dot" style="background:var(--s-nao)"></div> Data de corte ativa (havia fila)</div>
+        <div class="chart-ann-item"><div class="chart-ann-dot" style="background:var(--s-alto)"></div> Hoje — Current novamente</div>
+      </div>
+    </div>
+
+    <div class="highlight red">
+      <div class="highlight-title">O que o gráfico mostra</div>
+      <p>De Dezembro de 2022 até Março de 2026 — mais de 3 anos — havia uma data de corte ativa para o EB-2. Isso significa que quem deu entrada depois de Dezembro de 2022 precisava esperar na fila. Hoje, a fila acabou novamente. Mas o próprio boletim oficial avisa: <strong>pode voltar a ter fila ao longo de 2026 conforme novos pedidos chegam.</strong></p>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 3: OBJEÇÃO 75 PAÍSES -->
+  <div class="section">
+    <div class="sec-label">A pergunta que todo brasileiro faz</div>
+    <div class="sec-title">"Mas o Brasil não está<br>na <em>lista dos 75 países</em>?"</div>
+
+    <p class="lead">Sim — e é preciso entender exatamente <strong>o que isso significa, por que aconteceu, e o que não impede.</strong></p>
+
+    <div class="highlight navy">
+      <div class="highlight-title">Por que o Brasil foi incluído — a questão do "Public Charge"</div>
+      <p>O termo <em>Public Charge</em> significa "encargo público" — a ideia de que um imigrante pode se tornar dependente de benefícios do governo americano. Em 2019, o governo Trump endureceu drasticamente essa regra: passou a considerar como fator negativo o uso de plano de saúde subsidiado, auxílio-alimentação (SNAP), moradia social, Medicaid e outros benefícios.<sup class="fn">[1]</sup> Em 2020, a Suprema Corte dos EUA permitiu que a regra entrasse em vigor.</p>
+      <p style="margin-top:10px">O governo Biden reverteu a regra em 2021. Agora, o governo Trump 2025 está revisitando essa lógica — e a pausa de 75 países é exatamente uma "revisão de Public Benefit" (benefício público): uma auditoria de quantos imigrantes desses países utilizam ou teriam propensão a utilizar programas de assistência do governo americano. O Brasil está na lista desta revisão.<sup class="fn">[2]</sup></p>
+    </div>
+
+    <div class="highlight green" style="margin-top:14px">
+      <div class="highlight-title">O que a pausa afeta: processamento consular</div>
+      <p>A suspensão afeta quem está no Brasil e precisaria ir a uma entrevista no Consulado americano para receber o visto de imigrante fisicamente. Para essa etapa específica, há uma pausa em andamento desde 21 de janeiro de 2026. Isso não é novidade — já estamos convivendo com essa situação há alguns meses.</p>
+    </div>
+
+    <div class="highlight amber">
+      <div class="highlight-title">O que a pausa NÃO afeta: ajuste de status dentro dos EUA</div>
+      <p>Quem está <strong>dentro dos EUA com visto válido</strong> pode fazer o processo pelo USCIS, via ajuste de status (formulário I-485). Esse caminho é gerenciado por um órgão federal completamente diferente do consulado — e a pausa consular não o bloqueia diretamente.<sup class="fn">[3]</sup></p>
+    </div>
+
+    <div class="highlight green">
+      <div class="highlight-title">O que qualquer profissional qualificado pode fazer agora — de onde estiver</div>
+      <p><strong>O I-140 — o formulário que trava a sua posição na fila — pode ser dado entrada hoje,</strong> independentemente de onde você está. Mesmo estando no Brasil, dar entrada no I-140 agora fixa sua data de prioridade. Quando o processamento consular retomar, você já estará à frente de quem esperou.</p>
+    </div>
+
+    <div class="card" style="margin-top:18px">
+      <p><strong>Uma perspectiva importante sobre a questão financeira:</strong> profissionais qualificados para EB-1A, EB-2 NIW ou EB-5 demonstram, por definição, trajetória profissional sólida, renda acima da média ou patrimônio comprovável. A avaliação de Public Charge considera exatamente esses fatores positivamente — renda, formação, habilidades e ausência de dependência de benefícios governamentais. Para os perfis que essa categoria atende, essa questão raramente é um obstáculo real.</p>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 4: DATA DE PRIORIDADE -->
+  <div class="section">
+    <div class="sec-label">Conceito essencial</div>
+    <div class="sec-title">O que é <em>data de prioridade</em><br>— explicado de forma simples</div>
+
+    <p>Imagine que você entra numa fila de banco. O número da sua senha — o momento em que você <strong>deu entrada no seu pedido</strong> — é a sua data de prioridade. Mesmo que a fila fique longa depois que você entrou, o seu número está guardado para sempre.</p>
+
+    <p style="margin-top:12px">No processo de Green Card, a data de prioridade é a data em que o USCIS recebe o seu <strong>I-140</strong> — o formulário em que você dá entrada no pedido de imigração. A partir daí, você tem um lugar reservado na fila. Se o governo criar uma data de corte depois — o que tecnicamente se chama de <em>retrogression</em> — você já está dentro da fila com a posição garantida. Quem não deu entrada ainda, entra na fila onde ela estiver naquele momento.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-num">Passo 1</div>
+        <div class="tl-text">Qualificação</div>
+        <div class="tl-sub">Avaliação do seu perfil</div>
+      </div>
+      <div class="tl-item active">
+        <div class="tl-num">★ Data de Prioridade</div>
+        <div class="tl-text">Você dá entrada no I-140</div>
+        <div class="tl-sub">Sua posição na fila é fixada aqui</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">Passo 3</div>
+        <div class="tl-text">I-140 aprovado</div>
+        <div class="tl-sub">USCIS confirma elegibilidade</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">Passo 4</div>
+        <div class="tl-text">I-485 ou Consular</div>
+        <div class="tl-sub">Ajuste de status (EUA) ou entrevista (Brasil)</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-num">Passo 5</div>
+        <div class="tl-text">Green Card</div>
+        <div class="tl-sub">Residência permanente</div>
+      </div>
+    </div>
+
+    <div class="highlight red">
+      <div class="highlight-title">Por que o tempo importa agora</div>
+      <p>O próprio boletim oficial do governo americano de Abril de 2026 inclui um aviso explícito: <strong>pode ser necessário criar uma data de corte mais tarde no ano fiscal, à medida que novos pedidos chegam ou as políticas mudam.</strong> Não é especulação — é o Departamento de Estado avisando que a janela atual pode se fechar. Quem dá entrada hoje fixa a posição. Quem espera, entra onde a fila estiver.</p>
+    </div>
+  </div>
+
+  <!-- SEÇÃO 5: CENÁRIOS -->
+  <div class="section">
+    <div class="sec-label">Sua situação atual</div>
+    <div class="sec-title">Os 5 caminhos possíveis:<br><em>entenda o seu</em></div>
+
+    <p>O nível de segurança do processo varia de acordo com um fator central: <strong>qual é o seu visto ou status nos EUA hoje?</strong> Veja os cenários do mais seguro ao que exige maior atenção.</p>
+
+    <div class="scenario-list" style="margin-top:26px">
+
+      <!-- CENÁRIO 1 -->
+      <div class="scenario s1">
+        <div class="scenario-top">
+          <div class="scen-badge s1"><span class="scen-badge-num">01</span><span class="scen-badge-word">Cenário</span></div>
+          <div class="scen-meta">
+            <div class="scen-title">I-140 já aprovado — próximo passo: I-485</div>
+            <div class="scen-visas">Qualquer status válido nos EUA · I-140 com aprovação prévia</div>
+          </div>
+          <div class="sec-num-right s1"><div class="seg-pct">85%</div><div class="seg-label">Segurança<br>Muito Alta</div></div>
+        </div>
+        <div class="seg-bar-wrap s1"><div class="seg-bar-bg"><div class="seg-bar-fill"></div></div></div>
+        <div class="scenario-body">
+          <p>Se o seu I-140 já foi aprovado, a parte mais exigente está concluída. Sua posição na fila já está fixada e o USCIS já analisou sua elegibilidade. O próximo passo é dar entrada no I-485 — o formulário que finaliza o ajuste de status para Green Card.</p>
+          <p>Com o EB-2 e EB-1 <em>Current</em> para o Brasil, você pode dar entrada nessa etapa agora. Durante o processo, é possível solicitar simultaneamente a autorização de trabalho (EAD) e o documento de viagem chamado Advance Parole — que permitem trabalhar e viajar enquanto o I-485 está em andamento.</p>
+          <div class="atencao-box">
+            <div class="atencao-label">Ponto de atenção</div>
+            <p>Nunca viaje para fora dos EUA com o I-485 em andamento sem ter o Advance Parole (I-131) aprovado em mãos. Sem ele, o pedido é considerado abandonado automaticamente, independentemente do motivo da viagem.</p>
+          </div>
+          <div class="scen-chips">
+            <span class="chip ok">✓ Posição na fila já fixada</span>
+            <span class="chip ok">✓ Elegibilidade já confirmada</span>
+            <span class="chip warn">⚠ Viagem exige Advance Parole</span>
+            <span class="chip info">ℹ Processo: 12 a 31 meses</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENÁRIO 2 -->
+      <div class="scenario s2">
+        <div class="scenario-top">
+          <div class="scen-badge s2"><span class="scen-badge-num">02</span><span class="scen-badge-word">Cenário</span></div>
+          <div class="scen-meta">
+            <div class="scen-title">Visto de trabalho com dupla intenção — caminho mais direto</div>
+            <div class="scen-visas">H-1B (especialidade) · L-1 (transferência intracompanhia) · O-1 (habilidade extraordinária)</div>
+          </div>
+          <div class="sec-num-right s2"><div class="seg-pct">75%</div><div class="seg-label">Segurança<br>Alta</div></div>
+        </div>
+        <div class="seg-bar-wrap s2"><div class="seg-bar-bg"><div class="seg-bar-fill"></div></div></div>
+        <div class="scenario-body">
+          <p>Vistos como H-1B, L-1 e O-1 são chamados pela lei americana de <strong>vistos de dupla intenção</strong>: ao obtê-los, você não declarou que nunca vai imigrar — e portanto não há contradição em dar entrada no processo de Green Card enquanto os possui. Isso elimina o principal risco de questionamento de intenção.</p>
+          <p>Com esses vistos, você pode dar entrada no I-140 e no I-485 <strong>ao mesmo tempo</strong> (o que se chama de <em>concurrent filing</em>), o que acelera o processo e fixa a posição na fila desde o primeiro dia.</p>
+          <div class="atencao-box">
+            <div class="atencao-label">Ponto de atenção — manter o visto atual</div>
+            <p>Mesmo após dar entrada no I-485, é prudente <strong>manter o H-1B ou L-1 válido e renovado</strong> durante todo o processo. O motivo prático: se o I-485 tiver algum problema e precisar ser reprocessado, você ainda está amparado pelo seu visto de trabalho original. Sem esse status ativo, uma situação inesperada poderia deixar você sem respaldo legal imediato. Isso também implica continuar no mesmo vínculo empregatício ou comunicar mudanças ao especialista responsável pelo seu processo.</p>
+          </div>
+          <div class="scen-chips">
+            <span class="chip ok">✓ Dupla intenção: sem conflito legal</span>
+            <span class="chip ok">✓ Concurrent filing possível</span>
+            <span class="chip warn">⚠ Manter H-1B / L-1 válido durante o processo</span>
+            <span class="chip warn">⚠ Comunicar mudanças de emprego ao especialista</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENÁRIO 3 -->
+      <div class="scenario s3">
+        <div class="scenario-top">
+          <div class="scen-badge s3"><span class="scen-badge-num">03</span><span class="scen-badge-word">Cenário</span></div>
+          <div class="scen-meta">
+            <div class="scen-title">Visto de estudante — processo possível com atenção ao status</div>
+            <div class="scen-visas">F-1 · M-1 · OPT · STEM OPT · Cursos de idioma</div>
+          </div>
+          <div class="sec-num-right s3"><div class="seg-pct">55%</div><div class="seg-label">Segurança<br>Moderada</div></div>
+        </div>
+        <div class="seg-bar-wrap s3"><div class="seg-bar-bg"><div class="seg-bar-fill"></div></div></div>
+        <div class="scenario-body">
+          <p>Este é um dos cenários mais comuns na comunidade brasileira nos EUA. Inclui quem está em programas universitários, mestrado, doutorado, programas de idiomas (inglês) — que são muito frequentes — e também quem está em OPT ou STEM OPT após a graduação. Médicos em residência, engenheiros em STEM OPT, pesquisadores com PhD e estudantes de inglês que já planejam qualificação profissional nos EUA entram nesta categoria.</p>
+          <p>O F-1 é um visto que por definição exige que o titular declare intenção de retornar ao país de origem após os estudos. Isso não impede o processo de Green Card — mas significa que é importante que a decisão de buscar residência permanente tenha surgido <strong>durante a estadia</strong>, não antes de entrar nos EUA.</p>
+          <div class="atencao-box">
+            <div class="atencao-label">Ponto de atenção — manter o status de estudante ativo</div>
+            <p><strong>Enquanto o I-485 está em andamento, é fundamental manter o status F-1 regular</strong> — estar matriculado, em OPT válido ou STEM OPT ativo. Se o I-485 tiver alguma intercorrência e a pessoa não tiver mais o status de estudante, o amparo legal desaparece. Perder o F-1 durante o processo é uma das situações mais difíceis de reverter nesse caminho.</p>
+          </div>
+          <div class="scen-chips">
+            <span class="chip ok">✓ OPT / STEM OPT: trabalho autorizado</span>
+            <span class="chip ok">✓ Inclui cursos de idioma e pós-graduação</span>
+            <span class="chip warn">⚠ Manter matrícula ou OPT ativo durante o processo</span>
+            <span class="chip warn">⚠ Documentar que a intenção surgiu nos EUA</span>
+            <span class="chip bad">✗ F-1 não é visto de dupla intenção</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENÁRIO 4 -->
+      <div class="scenario s4">
+        <div class="scenario-top">
+          <div class="scen-badge s4"><span class="scen-badge-num">04</span><span class="scen-badge-word">Cenário</span></div>
+          <div class="scen-meta">
+            <div class="scen-title">Visto de turista — dar entrada no I-140, I-485 depois com planejamento</div>
+            <div class="scen-visas">B-1 / B-2 · Estratégia específica exigida</div>
+          </div>
+          <div class="sec-num-right s4"><div class="seg-pct">35%</div><div class="seg-label">Segurança<br>Baixa</div></div>
+        </div>
+        <div class="seg-bar-wrap s4"><div class="seg-bar-bg"><div class="seg-bar-fill"></div></div></div>
+        <div class="scenario-body">
+          <p>Algumas pessoas que estão nos EUA como turistas optam por dar entrada no I-140 para fixar a posição na fila — o que é legalmente possível — e deixam o I-485 para uma etapa posterior, quando estiverem em status mais robusto ou após retornar com um visto mais adequado.</p>
+          <p>O cuidado central: ao dar entrada num I-140 estando em visto de turista, há um registro implícito de que havia intenção de imigrar. O B-2 tem duração limitada (geralmente 6 meses), o que cria pressão de prazo. Qualquer decisão nesse caminho precisa ser analisada individualmente e com muita atenção à documentação.</p>
+          <div class="atencao-box">
+            <div class="atencao-label">Ponto de atenção</div>
+            <p>Este é um dos cenários em que a avaliação individual feita por um advogado de imigração licenciado nos EUA é mais importante. Os detalhes específicos de cada caso — quando a pessoa entrou, o que fez desde então, qual é o prazo do B-2 — mudam significativamente o nível de complexidade.</p>
+          </div>
+          <div class="scen-chips">
+            <span class="chip warn">⚠ I-140 é legalmente possível em B-2</span>
+            <span class="chip bad">✗ Intenção de imigrar fica implícita no registro</span>
+            <span class="chip bad">✗ B-2 tem prazo curto — risco de overstay</span>
+            <span class="chip info">ℹ Avaliação caso a caso é indispensável</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CENÁRIO 5 -->
+      <div class="scenario s5">
+        <div class="scenario-top">
+          <div class="scen-badge s5"><span class="scen-badge-num">05</span><span class="scen-badge-word">Cenário</span></div>
+          <div class="scen-meta">
+            <div class="scen-title">Visto de turista — I-140 + I-485 imediatos e simultâneos</div>
+            <div class="scen-visas">B-1 / B-2 · Combinação que requer atenção máxima</div>
+          </div>
+          <div class="sec-num-right s5"><div class="seg-pct">15%</div><div class="seg-label">Não<br>Recomendado</div></div>
+        </div>
+        <div class="seg-bar-wrap s5"><div class="seg-bar-bg"><div class="seg-bar-fill"></div></div></div>
+        <div class="scenario-body">
+          <p>Esta é uma combinação que parece atalho, mas carrega riscos sérios. Dar entrada no I-140 e no I-485 ao mesmo tempo, logo após entrar nos EUA como turista, cria uma contradição direta: ao pedir o visto de turista, a pessoa declarou que viria por período temporário. Ao protocolar o I-485 imediatamente, está dizendo que veio para ficar — o que pode ser interpretado como incoerência de intenção.</p>
+          <p>O risco concreto está no cenário de negação do I-140: se isso acontecer, o I-485 também cai junto. A pessoa fica <strong>sem nenhum status legal nos EUA</strong>. Se o visto B-2 já tiver expirado, começa o acúmulo de presença irregular — o que pode gerar um impedimento de 3 ou 10 anos para reentrar nos EUA no futuro.</p>
+          <div class="atencao-box">
+            <div class="atencao-label">Ponto de atenção — consequências de uma negação</div>
+            <p>Se o I-140 for negado: o I-485 cai automaticamente · a pessoa fica sem status legal · se o B-2 expirou, começa a presença irregular · possível impedimento de 3 a 10 anos para reentrar nos EUA. Esta combinação específica não deve ser iniciada sem avaliação jurídica detalhada do caso.</p>
+          </div>
+          <div class="scen-chips">
+            <span class="chip bad">✗ Contradição de intenção documentada</span>
+            <span class="chip bad">✗ Negação = sem status legal imediato</span>
+            <span class="chip bad">✗ Possível impedimento de 3 a 10 anos</span>
+            <span class="chip bad">✗ Exige avaliação jurídica antes de qualquer ação</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TABELA RESUMO -->
+  <div class="section">
+    <div class="sec-label">Visão rápida</div>
+    <div class="sec-title">Resumo por <em>situação atual</em></div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Sua situação</th>
+            <th>Segurança</th>
+            <th>Se houver negação do I-140</th>
+            <th>Pode dar entrada agora?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>I-140 já aprovado</strong></td>
+            <td><span class="seg-chip mt-alto">Muito Alta · 85%</span></td>
+            <td style="font-size:12px;color:var(--muted)">Não se aplica</td>
+            <td style="font-size:12px">✓ Sim — I-485</td>
+          </tr>
+          <tr>
+            <td><strong>H-1B / L-1 / O-1</strong></td>
+            <td><span class="seg-chip alto">Alta · 75%</span></td>
+            <td style="font-size:12px;color:var(--muted)">I-485 cai · mantém visto original</td>
+            <td style="font-size:12px">✓ Sim — concurrent filing</td>
+          </tr>
+          <tr>
+            <td><strong>F-1 / OPT / Idioma</strong></td>
+            <td><span class="seg-chip moderado">Moderada · 55%</span></td>
+            <td style="font-size:12px;color:var(--muted)">I-485 cai · mantém F-1 se ativo</td>
+            <td style="font-size:12px">✓ Sim — com atenção ao status</td>
+          </tr>
+          <tr>
+            <td><strong>B-2 turista — estratégia gradual</strong></td>
+            <td><span class="seg-chip baixo">Baixa · 35%</span></td>
+            <td style="font-size:12px;color:var(--muted)">Histórico de intenção pode ser questionado</td>
+            <td style="font-size:12px">⚠ I-140 sim, com análise</td>
+          </tr>
+          <tr>
+            <td><strong>B-2 turista + I-485 simultâneo</strong></td>
+            <td><span class="seg-chip nao">Não recomendado · 15%</span></td>
+            <td style="font-size:12px;color:var(--muted)">Sem status · risco de impedimento 3–10 anos</td>
+            <td style="font-size:12px">✗ Não sem avaliação jurídica</td>
+          </tr>
+          <tr>
+            <td><strong>Fora dos EUA (Brasil)</strong></td>
+            <td><span class="seg-chip pausa">Consular pausado</span></td>
+            <td style="font-size:12px;color:var(--muted)">N/A</td>
+            <td style="font-size:12px">✓ I-140 sim — fixa posição na fila</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- NOTAS -->
+  <div class="footnotes">
+    <div class="fn-title">Fontes e referências</div>
+    <div class="fn-item">
+      <sup>[1]</sup>
+      <div><strong>Regra de Public Charge — Trump 2019:</strong> Em agosto de 2019, o governo Trump publicou uma regra expandindo o conceito de "encargo público" (public charge). A regra passou a considerar negativamente, na avaliação de pedidos de Green Card, o uso de benefícios como Medicaid, auxílio-alimentação (SNAP), moradia subsidiada e plano de saúde sem custeio próprio. A Suprema Corte dos EUA permitiu que a regra entrasse em vigor em fevereiro de 2020. O governo Biden a suspendeu em 2021. O governo Trump 2025 retomou a lógica dessa revisão como base para a pausa de processamento dos 75 países em 2026.</div>
+    </div>
+    <div class="fn-item">
+      <sup>[2]</sup>
+      <div><strong>Pausa de processamento consular para 75 países (21 de janeiro de 2026):</strong> O Departamento de Estado americano suspendeu a emissão de vistos de imigrante para nacionais de 75 países, incluindo o Brasil, para conduzir uma revisão de "public benefit" — ou seja, uma análise do perfil de uso de benefícios públicos por imigrantes dessas nacionalidades. O Brasil foi incluído nessa lista de revisão. A pausa é específica para vistos de imigrante emitidos via consulado no exterior e não tem prazo definido para encerramento.</div>
+    </div>
+    <div class="fn-item">
+      <sup>[3]</sup>
+      <div><strong>PP 10949 e PP 10998 — Proclamações Presidenciais de junho e dezembro de 2025:</strong> A PP 10949 (4 de junho de 2025) e a PP 10998 (16 de dezembro de 2025, vigência a partir de 1º de janeiro de 2026) são os atos oficiais do presidente Trump que estabelecem restrições de entrada e emissão de vistos para nacionais de países identificados como de alto risco em termos de triagem e segurança. Juntas, afetam 39 países com suspensão total ou parcial de vistos. O Brasil foi incluído na revisão mais ampla de public benefit — não diretamente nessas proclamações, mas no processo de revisão que delas deriva.</div>
+    </div>
+    <div class="fn-item">
+      <sup>[4]</sup>
+      <div><strong>USCIS PM-602-0194 (1º de janeiro de 2026):</strong> Memorando interno da USCIS (o órgão americano que processa pedidos de imigração dentro dos EUA, separado do Consulado) determinando a suspensão temporária da decisão final sobre pedidos de benefícios imigratórios para nacionais dos países listados nas proclamações acima. Os formulários afetados incluem I-485 (ajuste de status), I-131 (Advance Parole), I-765 (autorização de trabalho) e outros. Os pedidos continuam sendo aceitos e processados internamente — a pausa é na decisão final, não no recebimento ou tramitação.</div>
+    </div>
+    <div class="fn-item">
+      <sup>[5]</sup>
+      <div><strong>Visa Bulletin for April 2026 — U.S. Department of State (publicado em 4 de março de 2026):</strong> Boletim oficial mensal que define a disponibilidade de vistos de imigrante por categoria e país de nascimento. "Current" indica que não há data de corte ativa — todos os pedidos dessa categoria podem ser processados. A última vez que o EB-2 esteve "Current" para o Brasil antes de abril de 2026 foi em dezembro de 2022. Fonte primária de todos os dados deste guia.</div>
+    </div>
+  </div>
+
+  <!-- RODAPÉ -->
+  <div class="footer-wrap" style="margin-top:44px">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-name">Bruno Corim</div>
+        <div class="footer-role">Planejador Internacional · Setor Comercial</div>
+        <div class="footer-company">D4U Immigration</div>
+        <a href="https://www.linkedin.com/in/brunocorim/" target="_blank" class="footer-linkedin">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          linkedin.com/in/brunocorim
+        </a>
+      </div>
+      <div class="footer-disclaimer">
+        <strong>Este material é uma análise informativa</strong>, baseada em dados públicos do Departamento de Estado americano e da USCIS. Não constitui aconselhamento jurídico nem substitui a orientação de um advogado de imigração licenciado nos EUA. Cada caso possui particularidades que devem ser avaliadas individualmente por um profissional habilitado.
+      </div>
+    </div>
+    <div class="footer-date">
+      <span>Análise referente ao Visa Bulletin de Abril de 2026</span>
+      <span>Elaborado em Março de 2026</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+// Dados EB-2 Brasil (Rest of World) Final Action Date
+// "Current" = plotamos como valor 2026.33 (Abril 2026 = hoje, topo da escala)
+// Datas intermediárias convertidas em decimal de ano
+
+const toYear = (y, m) => y + (m - 1) / 12;
+const CURRENT = 2026.5; // representação visual de "sem fila"
+
+const labels = [
+  'Jan/22','Feb/22','Mar/22','Apr/22','May/22','Jun/22',
+  'Jul/22','Aug/22','Sep/22','Oct/22','Nov/22','Dec/22',
+  'Jan/23','Feb/23','Mar/23','Apr/23','May/23','Jun/23',
+  'Jul/23','Aug/23','Sep/23','Oct/23','Nov/23','Dec/23',
+  'Jan/24','Feb/24','Mar/24','Apr/24','May/24','Jun/24',
+  'Jul/24','Aug/24','Sep/24','Oct/24','Nov/24','Dec/24',
+  'Jan/25','Feb/25','Mar/25','Apr/25','May/25','Jun/25',
+  'Jul/25','Aug/25','Sep/25','Oct/25','Nov/25','Dec/25',
+  'Jan/26','Feb/26','Mar/26','Abr/26'
+];
+
+const data = [
+  // 2022: EB-2 ROW foi Current até Dez/2022
+  CURRENT, CURRENT, CURRENT, CURRENT, CURRENT, CURRENT,
+  CURRENT, CURRENT, CURRENT, CURRENT, CURRENT, CURRENT,
+  // Jan 2023: ainda current ou perto - primeira retrogression Feb/Mar 2023
+  CURRENT,
+  // Feb 2023: retrogression começa
+  toYear(2022,7),
+  toYear(2022,7),
+  // Apr 2023: Jul 1, 2022
+  toYear(2022,7),
+  // May 2023: Feb 15, 2022
+  toYear(2022,2),
+  toYear(2022,2),
+  // Jul-Set 2023: flutuando ~Feb 2022
+  toYear(2022,2), toYear(2022,2), toYear(2022,2),
+  // Oct 2023: novo ano fiscal, avança
+  toYear(2022,7),
+  toYear(2022,9), toYear(2022,11),
+  // Jan 2024: avanço gradual
+  toYear(2023,1), toYear(2023,3), toYear(2023,5),
+  toYear(2023,6), toYear(2023,7), toYear(2023,8),
+  toYear(2023,9), toYear(2023,10), toYear(2023,11),
+  toYear(2023,11), toYear(2023,11),
+  // Dec 2024: avanço
+  toYear(2023,12),
+  // Jan 2025
+  toYear(2024,1),
+  // Feb 2025: Aug 1, 2023 (final action)
+  toYear(2023,8),
+  toYear(2023,9), toYear(2023,10), toYear(2023,11), toYear(2023,12),
+  toYear(2024,2), toYear(2024,4),
+  // Aug 2025: retrogression to Sep 1, 2023
+  toYear(2023,9),
+  toYear(2023,9), toYear(2023,10),
+  // Nov-Dez 2025: avanço
+  toYear(2023,12),
+  // Dec 2025: Feb 1, 2024
+  toYear(2024,2),
+  // Jan 2026: Apr 1, 2024
+  toYear(2024,4),
+  // Feb 2026: Oct 15, 2024
+  toYear(2024,10.5),
+  // Mar 2026: Current
+  CURRENT,
+  // Abr 2026: Current
+  CURRENT
+];
+
+const pointColors = data.map((v, i) => {
+  if (v >= CURRENT) return '#1B4D3E';
+  if (v < toYear(2022, 3)) return '#8B1A1A';
+  return '#7B5E3A';
+});
+
+const pointRadius = data.map((v, i) => {
+  if (i === labels.length - 1 || i === labels.length - 2) return 6;
+  if (i === 11) return 6; // Dec 2022
+  return 2;
+});
+
+const ctx = document.getElementById('eb2Chart').getContext('2d');
+
+// Annotation line for CURRENT
+Chart.defaults.font.family = "'Raleway', sans-serif";
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels,
+    datasets: [{
+      label: 'Data de Corte EB-2 (Brasil)',
+      data,
+      borderColor: '#222D52',
+      backgroundColor: 'rgba(34,45,82,0.06)',
+      borderWidth: 1.5,
+      tension: 0.3,
+      fill: true,
+      pointBackgroundColor: pointColors,
+      pointBorderColor: pointColors,
+      pointRadius: pointRadius,
+      pointHoverRadius: 6,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: (ctx) => {
+            const v = ctx.parsed.y;
+            if (v >= CURRENT) return ' CURRENT — sem fila de espera';
+            const year = Math.floor(v);
+            const month = Math.round((v - year) * 12) + 1;
+            const months = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+            return ` Corte: ${months[month-1]}/${year}`;
+          }
+        },
+        backgroundColor: '#222D52',
+        titleColor: '#9baac8',
+        bodyColor: '#fff',
+        padding: 10,
+        cornerRadius: 2,
+        titleFont: { family: "'Josefin Sans', sans-serif", size: 10 },
+        bodyFont: { family: "'Raleway', sans-serif", size: 12, weight: '300' },
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          maxTicksLimit: 14,
+          maxRotation: 45,
+          font: { family: "'Josefin Sans', sans-serif", size: 9 },
+          color: '#7A7E8F',
+        },
+        grid: { color: '#E8E4E0' },
+        border: { color: '#D5CFC8' }
+      },
+      y: {
+        min: 2021.5,
+        max: 2027,
+        ticks: {
+          callback: (v) => {
+            if (v >= CURRENT - 0.1) return '● CURRENT';
+            const year = Math.floor(v);
+            const month = Math.round((v - year) * 12) + 1;
+            if (month === 1) return `${year}`;
+            if (month === 7) return `Jul/${year}`;
+            return '';
+          },
+          font: { family: "'Josefin Sans', sans-serif", size: 9 },
+          color: '#7A7E8F',
+          maxTicksLimit: 8,
+        },
+        grid: { color: '#E8E4E0' },
+        border: { color: '#D5CFC8' }
+      }
+    }
+  }
+});
+</script>
+</body>
+</html>
